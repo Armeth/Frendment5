@@ -1,3 +1,19 @@
+/* ----------------- */
+/* Custom Properties */
+/* ----------------- */
+
+/* This is the usual way of doing things but... :root {
+  --VoidBlue: hsla(230, 35%, 7%);
+  --Periwinkle: hsla(231, 77%, 90%);
+  --White: hsla(0, 0, 100%);
+}  can do it this way and use classes below to more easily manipulate the a values on hsla*/
+
+:root {
+  --VoidBlue: 230 35% 7%;
+  --Periwinkle: 231 77% 90%;
+  --White: 0 0% 100%;
+}
+
 /* ---------------------------*/
 /* Reset Template*/
 /* -------------------------- */
@@ -89,4 +105,34 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+.box {
+  background-color: lightblue;
+  padding: 3rem;
+}
+
+/* colors */
+
+.bg-VoidBlue {
+  background-color: hsl(var(--VoidBlue));
+}
+.bg-Periwinkle {
+  background-color: hsl(var(--Periwinkle));
+}
+.bg-White {
+  background-color: hsl(var(--White));
+}
+
+.text-VoidBlue {
+  color: hsl(var(--VoidBlue));
+}
+.text-Periwinkle {
+  color: hsl(var(--Periwinkle));
+}
+.text-White {
+  color: hsl(var(--White));
+}
+.example {
+  background-color: hsl(var(--Periwinkle) / 0.2);
 }
